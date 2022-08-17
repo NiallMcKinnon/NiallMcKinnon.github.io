@@ -1,1 +1,0 @@
-# NiallMcKinnon.github.io
