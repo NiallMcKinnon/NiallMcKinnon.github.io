@@ -24,6 +24,12 @@
     p {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: justify;
+        font-weight: 80;
+    }
+
+    figcaption {
+        font-size: smaller;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .center {
@@ -37,6 +43,10 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .logo {
+        width: 100px;
     }
 </style>
 
@@ -54,7 +64,7 @@
     </p>
     
     <figure class="center">
-        <img src="images/NASA_logo.svg" alt="NASA Meatball Insigna"/>
+        <img src="images/NASA_logo.svg" alt="NASA Meatball Insigna" class="logo"/>
         <h2 style="text-align:center;">Autonomous Rover for Lunar Terrain Navigation</h2>
         <h3 style="text-align:center;">NASA Marshall Space Flight Center</h3>
 
@@ -74,6 +84,28 @@
             and hospitals.
             Thus, this project pushes the bounderies of Navigation 2 due to our focus on unstructured environments
             and uneven terrain.
+        </p>
+    </figure>
+
+    <figure class="center">
+        <img src="images/Uncwlogo.svg" alt="NASA Meatball Insigna" class="logo"/>
+        <h2 style="text-align:center;">Machine Vision</h2>
+        <h3 style="text-align:center;">University of North Carolina Wilmington</h3>
+
+        <img src="images/objectDetection.gif" />
+        <figcaption style="text-align:center;">Detecting object in camera frame.</figcaption>
+        
+        <img src="images/ballModel.jpg" />
+        <figcaption style="text-align:center;">Modeling object via camera depth information.</figcaption>
+        
+        <p>
+            This was an introductory robotics course taught at UNCW. I took the inagural offering of the course.
+            The project goal was to detect an object in 3D space and have a robot manipulator arm
+            move said object.
+        </p>
+        <p>
+            The bulk of programming was done in Python within the Robot Operating System framework.
+            This course served as an introduction to Robot Operating System, Linux, and Docker.
         </p>
     </figure>
 </body>
