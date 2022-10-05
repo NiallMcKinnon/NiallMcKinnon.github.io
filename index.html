@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+    project_header {
+        font-weight: 700;
+        font-size: larger;
+    }
+
+
+    div {
+        width: 500px;
+        height: 100px;
+        /* align-self: center; */
+        top: 50%;
+        left: 50%;
+        padding: 1%;
+        margin: auto;
+    }
+
+</style>
+
+
+
 <body>
-<h1 style="text-align:center;">Niall McKinnon</h1>
-<p style="text-align:center;">This page under construction</p>
-<h3>Autonomous Rover for Lunar Terrain Mapping</h3>
-<img src="images/Costmap.gif"/>
-<ul>
-    <li>Robot Operating System</li>
-    <li>Navigation 2</li>
-</ul>
+    <h1 style="text-align:center;">Niall McKinnon</h1>
+    <p style="text-align:center;">This page under construction</p>
+    <p style="text-align:left;">
+        This is a place to document my projects and work experience.
+        It is still in the very early stages, but hopefully can provide some helpful visuals
+        of projects listed on my resume. For the fall 2022 semester I am enrolled full-time as well
+        as working a full-time internship, so my time for personal projects such as this is currently limited.
+        This is also my first endeavour in HTML/CSS, so it's subject to massive changes/improvements.
+    </p>
+
+    <figure style="align-self:center;">
+        <div>
+            <img style="vertical-align:middle" src="images/NASA_logo.svg" width="100px" alt="NASA Meatball Insigna">
+            <project_header>Autonomous Rover for Lunar Terrain Mapping</project_header>
+        </div>
+        <img src="images/Costmap.gif" />
+        <figcaption style="text-align:center;">Building a hazard map using LiDAR.</figcaption>
+        <p>
+            The goal of this project is to perform GPS-denied navigation and terrain mapping,
+            demonstrating applications for the Moon and Mars.
+            This rover is equipped with a Frequency-Modulated Continuous Wave (FMCW) LiDAR
+            scanner, which has the ability to determine its position and velocity soley by
+            referencing its immediate surroundings.
+        </p>
+        <p>
+            The application is based on Robot Operating System and its Navigation 2 library, both open-source.
+            Navigation 2 was originally developed for use in structured environments such as warehouses
+            and hospitals.
+            Thus, this project pushes the bounderies of Navigation 2 due to our focus on unstructured environments
+            and uneven terrain.
+        </p>
+    </figure>
 </body>
+
 </html>
