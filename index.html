@@ -2,37 +2,42 @@
 <html>
 
 <style>
-    project_header {
-        font-weight: 700;
-        font-size: larger;
-        
-    }
+    /* * {
+        font-family: 'Arial'
 
-
-    div {
-        width: 500px;
-        height: 100px;
-        /* align-self: center; */
-        top: 50%;
-        left: 50%;
-        padding: 1%;
-        margin: auto;
-    }
-
-    /* .center {
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
-        padding-inline: 10%;
-        margin: auto;
     } */
 
+    h1 {
+        font-family: 'Century Gothic'
+    }
+
+    h2 {
+        font-size: larger;
+        font-family: 'Century Gothic'
+    }
+
+    h3 {
+        font-weight: lighter;
+        font-family: 'Century Gothic'
+    }
+
+    p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: justify;
+    }
+
     .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-}
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 </style>
 
 
@@ -40,21 +45,22 @@
 <body>
     <h1 style="text-align:center;">Niall McKinnon</h1>
     <p style="text-align:center;">This page under construction</p>
-    <p style="text-align:left;">
+    <p>
         This is a place to document my projects and work experience.
         It is still in the very early stages, but hopefully can provide some helpful visuals
         of projects listed on my resume. For the fall 2022 semester I am enrolled full-time as well
         as working a full-time internship, so my time for personal projects such as this is currently limited.
         This is also my first endeavour in HTML/CSS, so it's subject to massive changes/improvements.
     </p>
-
-    <div>
-        <img style="vertical-align:middle" src="images/NASA_logo.svg" width="auto" alt="NASA Meatball Insigna">
-        <project_header>Autonomous Rover for Lunar Terrain Mapping</project_header>
-    </div>
+    
     <figure class="center">
-        <img src="images/Costmap.gif" class="center"/>
+        <img src="images/NASA_logo.svg" alt="NASA Meatball Insigna"/>
+        <h2 style="text-align:center;">Autonomous Rover for Lunar Terrain Navigation</h2>
+        <h3 style="text-align:center;">NASA Marshall Space Flight Center</h3>
+
+        <img src="images/Costmap.gif" />
         <figcaption style="text-align:center;">Building a hazard map using LiDAR.</figcaption>
+        
         <p>
             The goal of this project is to perform GPS-denied navigation and terrain mapping,
             demonstrating applications for the Moon and Mars.
