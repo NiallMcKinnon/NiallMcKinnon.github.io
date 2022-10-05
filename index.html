@@ -41,25 +41,23 @@
         padding: 10px;
     }
 
-    img {
+    img, video {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 90%;
     }
 
-    video {
+    /* video {
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
+    } */
 
     .logo {
         width: 100px;
     }
 </style>
-
-
 
 <body>
     <h1 style="text-align:center;">Niall McKinnon</h1>
@@ -67,37 +65,45 @@
     <p class="center">
         This is a very early draft of my personal portfolio.
         While it's quite rough, I still wanted a visual aid for the projects listed on my resume.
-        This site is my first forray into web design, so massive changes/improvements will come.
+        This site is my first foray into web design, so massive changes/improvements will come.
         However, I am currently enrolled full-time as well as working a full-time internship,
         which leaves little room for personal projects.
     </p>
 
     <figure class="center">
-        <img src="images/NASA_logo.svg" alt="NASA Meatball Insigna" class="logo" />
+        <img src="images/NASA_logo.svg" alt="NASA Meatball Insignia" class="logo" />
         <h2 style="text-align:center;">Autonomous Rover for Lunar Terrain Navigation</h2>
         <h3 style="text-align:center;">NASA Marshall Space Flight Center</h3>
 
         <img src="images/Costmap.gif" />
         <figcaption style="text-align:center;">Building a hazard map using LiDAR.</figcaption>
 
+        <video autoplay muted loop>
+            <source src="images/pathfinding.webm" type="video/webm"/>
+        </video>
+        <figcaption style="text-align:center;">GPS-denied pathfinding and autonomous navigation.</figcaption>
+
+        <img src="images/roverInDirt.jpg"/>
+        <figcaption style="text-align:center;">Rover in lunar terrain field.</figcaption>
+        
         <p>
             The goal of this project is to perform GPS-denied navigation and terrain mapping,
             demonstrating applications for the Moon and Mars.
             This rover is equipped with a Frequency-Modulated Continuous Wave (FMCW) LiDAR
-            scanner, which has the ability to determine its position and velocity soley by
+            scanner, which has the ability to determine its position and velocity solely by
             referencing its immediate surroundings.
         </p>
         <p>
             The application is based on Robot Operating System and its Navigation 2 library, both open-source.
             Navigation 2 was originally developed for use in structured environments such as warehouses
             and hospitals.
-            Thus, this project pushes the bounderies of Navigation 2 due to our focus on unstructured environments
+            Thus, this project pushes the boundaries of Navigation 2 due to our focus on unstructured environments
             and uneven terrain.
         </p>
     </figure>
 
     <figure class="center">
-        <img src="images/Uncwlogo.svg" alt="NASA Meatball Insigna" class="logo" />
+        <img src="images/Uncwlogo.svg" alt="UNCW logo" class="logo" />
         <h2 style="text-align:center;">Machine Vision</h2>
         <h3 style="text-align:center;">University of North Carolina Wilmington</h3>
 
@@ -107,14 +113,14 @@
         <img src="images/ballModel.jpg" />
         <figcaption style="text-align:center;">Modeling object via camera depth information.</figcaption>
 
-        <video width="90%" autoplay muted loop>
+        <video autoplay muted loop>
             <source src="images/robotArm.MOV" type="video/mp4"/>
 
         </video>
-        <figcaption style="text-align:center;">Robot arm using data to manupilate object.</figcaption>
+        <figcaption style="text-align:center;">Robot arm using data to manipulate object.</figcaption>
 
         <p>
-            This was an introductory robotics course taught at UNCW. I took the inagural offering of the course.
+            This was an introductory robotics course taught at UNCW. I took the inaugural offering of the course.
             The project goal was to detect an object in 3D space and have a robot manipulator arm
             move said object.
         </p>
