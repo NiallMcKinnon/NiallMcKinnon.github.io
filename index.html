@@ -45,6 +45,12 @@
         margin-right: auto;
     }
 
+    video {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .logo {
         width: 100px;
     }
@@ -56,21 +62,21 @@
     <h1 style="text-align:center;">Niall McKinnon</h1>
     <p style="text-align:center;">This page under construction</p>
     <p>
-        This is a place to document my projects and work experience.
-        It is still in the very early stages, but hopefully can provide some helpful visuals
-        of projects listed on my resume. For the fall 2022 semester I am enrolled full-time as well
-        as working a full-time internship, so my time for personal projects such as this is currently limited.
-        This is also my first endeavour in HTML/CSS, so it's subject to massive changes/improvements.
+        This is a very early draft of my personal portfolio.
+        While it's quite rough, I still wanted a visual aid for the projects listed on my resume.
+        This site is my first forray into web design, so massive changes/improvements will come.
+        However, I am currently enrolled full-time as well as working a full-time internship,
+        which leaves little room for personal projects.
     </p>
-    
+
     <figure class="center">
-        <img src="images/NASA_logo.svg" alt="NASA Meatball Insigna" class="logo"/>
+        <img src="images/NASA_logo.svg" alt="NASA Meatball Insigna" class="logo" />
         <h2 style="text-align:center;">Autonomous Rover for Lunar Terrain Navigation</h2>
         <h3 style="text-align:center;">NASA Marshall Space Flight Center</h3>
 
         <img src="images/Costmap.gif" />
         <figcaption style="text-align:center;">Building a hazard map using LiDAR.</figcaption>
-        
+
         <p>
             The goal of this project is to perform GPS-denied navigation and terrain mapping,
             demonstrating applications for the Moon and Mars.
@@ -88,16 +94,22 @@
     </figure>
 
     <figure class="center">
-        <img src="images/Uncwlogo.svg" alt="NASA Meatball Insigna" class="logo"/>
+        <img src="images/Uncwlogo.svg" alt="NASA Meatball Insigna" class="logo" />
         <h2 style="text-align:center;">Machine Vision</h2>
         <h3 style="text-align:center;">University of North Carolina Wilmington</h3>
 
         <img src="images/objectDetection.gif" />
         <figcaption style="text-align:center;">Detecting object in camera frame.</figcaption>
-        
+
         <img src="images/ballModel.jpg" />
         <figcaption style="text-align:center;">Modeling object via camera depth information.</figcaption>
-        
+
+        <video width="100%" autoplay muted>
+            <source src="images/robotArm.MOV" type="video/mp4"/>
+
+        </video>
+        <figcaption style="text-align:center;">Robot arm using data to manupilate object.</figcaption>
+
         <p>
             This was an introductory robotics course taught at UNCW. I took the inagural offering of the course.
             The project goal was to detect an object in 3D space and have a robot manipulator arm
