@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    .projectHeader {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .headerIcon {
+        float: left;
+        padding-right: 20px;
+        width: 100px;
+    }
+    
+    .headerTitle {
+        font-size: 20pt;
+        font-weight: 1000;
+    }
+    
+    .headerSubTitle {
+        font-size: 15pt;
+    }
+    
+    figure {
+        display: inline-block;
+        margin: 20px; /* adjust as needed */
+    }
+    figure img {
+        vertical-align: top;
+    }
+    figure figcaption {
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .description {
+        display: flex;
+        align-items: center;
+    }
+    
+</style>
+
+<head>
+    <title>Niall McKinnon</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Roboto|Roboto+Mono">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+
+<body>
+    <a class="siteTitle" href="../index.html">Niall McKinnon</a>
+    
+    <div class="navBar">
+        <a class="navButton" href="">
+            Projects
+        </a>
+        <a class="navButton" href="./pages/cv.html">
+            CV
+        </a>
+        <a class="navButton" href="https://linkedin.com/in/niallmckinnon">
+            LinkedIn
+        </a>
+        <a class="navButton" href="mailto:nrm3009@uncw.edu">
+            Contact
+        </a>
+    </div>
+    
+    <div class="projectHeader">
+        <span class="headerIcon">
+            <img src="../images/NASA_logo.svg" alt="NASA Meatball Insignia" class="logo" />
+        </span>
+        <span>
+            <div class="headerTitle">Autonomous Rover for Lunar Terrain Mapping</div>   
+            <div class="headerSubTitle">NASA Marshall Space Flight Center</div>   
+        </span>
+    </div>
+    
+    <div class="description">
+        <span>
+            <figure>
+                <video style="height: 200px;" src="../images/3dMapping.mp4" type="video/mp4" autoplay loop muted></video>
+                <figcaption>Fig 1.1: 3D point cloud map</figcaption>
+            </figure>
+        </span>
+        <span>
+            <figure>
+                <video style="height: 200px;" src="../images/LunarField_Costmap.mp4" type="video/mp4" autoplay loop muted></video>
+                <figcaption>Fig 1.2: 2D occupancy grid</figcaption>
+            </figure>
+        </span>
+        <!-- <span>
+            Highly detailed 3D maps can create
+        </span> -->
+    </div>
+    
+    <div class="projectHeader">
+        <span class="headerIcon">
+            <img src="../images/Uncwlogo.svg" alt="UNCW Logo" class="logo" />
+        </span>
+        <span>
+            <div class="headerTitle">Machine Vision and Robot Motion Planning</div>   
+            <div class="headerSubTitle">University of North Carolina Wilmington</div>   
+        </span>
+    </div>
+</body>
+
+</html>

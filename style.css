@@ -4,6 +4,22 @@ body {
     max-width: 800px;
 }
 
+.siteTitle {
+    font-family: "Roboto";
+    font-size: 50pt;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 10px;
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.siteTitle:hover {
+    color: inherit;
+}
+
 .navBar {
     display: flex;
     justify-content: space-around;
