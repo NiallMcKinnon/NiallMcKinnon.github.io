@@ -7,6 +7,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        /* border: 1px solid green; */
+
     }
     
     .headerIcon {
@@ -14,6 +16,8 @@
         margin-right: 20px;
         width: 100px;
         height: auto;
+        /* border: 1px solid green; */
+
     }
     
     .headerTitle {
@@ -36,10 +40,27 @@
         text-align: center;
         vertical-align: top;
     }
-
+    
     .description {
+        margin: 1px;
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+
+    .summary {
+        margin: 30px 100px;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid green; */
+    }
+
+    .summary b {
+        margin-right: 10px;
+    }
+
+    .paragraph {
+        margin: 10px 0px;
     }
     
 </style>
@@ -68,7 +89,7 @@
         </a>
     </div>
     
-    <div class="projectHeader">
+    <div class=projectHeader>
         <span >
             <img class="headerIcon" src="images/NASA_logo.svg" alt="NASA Meatball Insignia"/>
         </span>
@@ -78,7 +99,23 @@
         </span>
     </div>
     
-    <div class="description">
+    <div class="desciption">
+        <div class=summary>
+            
+                <b>Objective: </b>
+            
+            <span>
+                Enable a LiDAR-equipped rover to autonomously create maps of analogue lunar terrain, to be used by subsequent vehicles and astronauts.
+            </span>
+        </div>
+
+        <div class=paragraph>
+            The rover is capable of two simultaneous localization and mapping (SLAM) methods. The first is 3D mapping (Figure 1.1), which
+            is incredibly valuable for astronaut EVA planning and identifying areas of scientific interest.
+            The second is a much simpler occupancy grid (Figure 1.2), which is more useful for vehicle navigation.
+            The 2D map is utilized for hazard avoidance and path planning.
+        </div>
+
         <span>
             <figure>
                 <video style="height: 200px;" src="images/3dMapping.mp4" type="video/mp4" autoplay loop muted></video>
@@ -91,7 +128,44 @@
                 <figcaption>Fig 1.2: 2D occupancy grid</figcaption>
             </figure>
         </span>
+        
+        <div class=paragraph>
+            3D map generation was already developed for the Kinematic Navigation and Cartography Knapsack (KNaCK),
+            of which this project is an offshoot. My work is focused on the navigation itself, with the goal of complete autonomy.
+        </div>
+
+        <span class="projectHeader">
+            <figure>
+                <video style="height: 300px;" src="images/pathfinding.webm" type="video/mp4" autoplay loop muted></video>
+                <figcaption>Fig 1.3: Simultaneous Localization & Mapping</figcaption>
+            </figure>
+        </span>
+        
+        <div class=paragraph>
+            This project makes use of Robot Operating System (ROS) and its Navigation 2 (Nav2) package.
+            Nav2 already has sophisticated map generation and path planning capabilities, but it was primarily
+            designed for structured environments such as warehouses. Thus, a key challenge of 
+            this project is adding robustness for an uneven environment. 
+        </div>
+
+        
+
     </div>
+    
+    <!-- <div class="description">
+        <span>
+            <figure>
+                <video style="height: 200px;" src="images/3dMapping.mp4" type="video/mp4" autoplay loop muted></video>
+                <figcaption>Fig 1.1: 3D point cloud map</figcaption>
+            </figure>
+        </span>
+        <span>
+            <figure>
+                <video style="height: 200px;" src="images/LunarField_Costmap.mp4" type="video/mp4" autoplay loop muted></video>
+                <figcaption>Fig 1.2: 2D occupancy grid</figcaption>
+            </figure>
+        </span>
+    </div> -->
     
     <div class="projectHeader">
         <span>
