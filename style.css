@@ -48,3 +48,64 @@ body {
 .navButton:focus {
     outline: none;
 }
+
+.projectHeader {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+
+.projectHeader img {
+    float: left;
+    margin-right: 20px;
+    width: 100px;
+    height: auto;
+    /* border: 1px solid green; */ 
+}
+
+.headerTitle {
+    font-size: 20pt;
+    font-weight: 1000;
+}
+
+.headerSubTitle {
+    font-size: 15pt;
+}
+
+figure figcaption {
+    text-align: center;
+    vertical-align: top;
+}
+
+.summary {
+    margin: 30px 100px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.summary b {
+    margin-right: 10px;
+}
+
+.section {
+    margin-bottom: 50px;
+    border-bottom: 1px solid black;
+}
+
+.inline {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    /* border: 1px solid green;  */
+    /* align-items: center; */
+}
+
+.imgGroup {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
