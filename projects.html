@@ -8,7 +8,7 @@
         justify-content: center;
         align-items: center;
         /* border: 1px solid green; */
-
+        
     }
     
     .headerIcon {
@@ -17,7 +17,7 @@
         width: 100px;
         height: auto;
         /* border: 1px solid green; */
-
+        
     }
     
     .headerTitle {
@@ -47,18 +47,18 @@
         align-items: center;
         justify-content: center;
     }
-
+    
     .summary {
         margin: 30px 100px;
         display: flex;
         justify-content: center;
         /* border: 1px solid green; */
     }
-
+    
     .summary b {
         margin-right: 10px;
     }
-
+    
     .paragraph {
         margin: 10px 0px;
     }
@@ -102,20 +102,20 @@
     <div class="desciption">
         <div class=summary>
             
-                <b>Objective: </b>
+            <b>Objective: </b>
             
             <span>
                 Enable a LiDAR-equipped rover to autonomously create maps of analogue lunar terrain, to be used by subsequent vehicles and astronauts.
             </span>
         </div>
-
+        
         <div class=paragraph>
             The rover is capable of two simultaneous localization and mapping (SLAM) methods. The first is 3D mapping (Figure 1.1), which
             is incredibly valuable for astronaut EVA planning and identifying areas of scientific interest.
             The second is a much simpler occupancy grid (Figure 1.2), which is more useful for vehicle navigation.
             The 2D map is utilized for hazard avoidance and path planning.
         </div>
-
+        
         <span>
             <figure>
                 <video style="height: 200px;" src="images/3dMapping.mp4" type="video/mp4" autoplay loop muted></video>
@@ -133,7 +133,7 @@
             3D map generation was already developed for the Kinematic Navigation and Cartography Knapsack (KNaCK),
             of which this project is an offshoot. My work is focused on the navigation itself, with the goal of complete autonomy.
         </div>
-
+        
         <span class="projectHeader">
             <figure>
                 <video style="height: 300px;" src="images/pathfinding.webm" type="video/mp4" autoplay loop muted></video>
@@ -147,35 +147,125 @@
             designed for structured environments such as warehouses. Thus, a key challenge of 
             this project is adding robustness for an uneven environment. 
         </div>
-
         
-
+        
+        
     </div>
-    
-    <!-- <div class="description">
-        <span>
-            <figure>
-                <video style="height: 200px;" src="images/3dMapping.mp4" type="video/mp4" autoplay loop muted></video>
-                <figcaption>Fig 1.1: 3D point cloud map</figcaption>
-            </figure>
-        </span>
-        <span>
-            <figure>
-                <video style="height: 200px;" src="images/LunarField_Costmap.mp4" type="video/mp4" autoplay loop muted></video>
-                <figcaption>Fig 1.2: 2D occupancy grid</figcaption>
-            </figure>
-        </span>
-    </div> -->
     
     <div class="projectHeader">
         <span>
             <img class="headerIcon" src="images/Uncwlogo.svg" alt="UNCW Logo"/>
         </span>
         <span>
-            <div class="headerTitle">Machine Vision and Robot Motion Planning</div>   
+            <div class="headerTitle">Computer Vision and Robot Motion Planning</div>   
             <div class="headerSubTitle">University of North Carolina Wilmington</div>   
         </span>
     </div>
+    
+    <div class="desciption">
+        <div class=summary>
+            <b>Objective: </b>
+            <span>
+                Have a robot identify and locate an object in 3D space, then perform
+                appropriate path planning to manipulate the object.
+            </span>
+        </div>
+        
+        <div class=paragraph>
+            I had the amazing opportunity to take the inaugural offering of UNCW's introductory robotics course.
+            The entire course was focused on a continuous project, designed to give an understanding of robotic systems.
+            A general outline of the project is shown below. 
+        </div>
+        
+        <span class="projectHeader">
+            <figure>
+                <img style="width: 700px;" src="images/objectDetection.gif" type="img/gif" autoplay loop muted></img>
+                <figcaption>Fig 2.1: Different methods of object detection</figcaption>
+            </figure>
+        </span>
+        
+        <p>
+            The hardware consisted of a robot manipulator arm and RGB-Depth (RGBD) camera.
+            We knew the characteristics of the object (tennis ball) and could tune our detection programs accordingly.
+            Figure 2.1 shows two different methods of object detection. The center panel isolates the ball through
+            filtering color values, while the rightmost panel uses shape detection from Python's OpenCV library.
+        </p>
+        
+        <p>
+            Once we know the ball's location in the frame, we can isolate the appropriate pixels.
+            The depth values within this area are fitted to a sphere to create a model of the ball.
+        </p>
+        
+        <div class="projectHeader" style="margin: 0px;">
+            <span>
+                <figure>
+                    <img style="width: 400px;" src="images/incorrectBall.jpg" type="img/jpg"></img>
+                    <figcaption>Fig 2.2: Model from color isolation.</figcaption>
+                </figure>
+            </span>
+            <!-- <p>
+                Figure 2.2 shows a model generated purely using color isolation.
+                White areas are those used in the 
+                As we can see, some background pixels have made their way
+                through the filter, causing them to distort the curve fitting program.
+            </p> -->
+            <p>
+                Figure 2.2 shows the point cloud generated from the camera's color and depth data.
+                Areas highlighted in white are those isolated from Figure 2.1. In this image, the ball was isolated
+                solely using color values. As we can see, the ball's model
+                (shown in red) has been distorted by background areas making it through the filter.
+                While the robotic gripper used is large enough to tolerate the resulting offset, a more
+                accurate solution would be idea.
+            </p>
+        </div>
+
+        <div class="projectHeader" style="margin: 0px; justify-content: left;">
+            <span>
+                <figure>
+                    <img style="width: 400px;" src="images/ballModel.jpg" type="img/jpg"></img>
+                    <figcaption>Fig 2.3: Model from shape detection.</figcaption>
+                </figure>
+            </span>
+            <p>
+                Figure 2.3 shows the vastly superior model generated using shape detection.
+                This was done by detecting the ball's shape, and then using a slightly smaller area
+                to perform the curve fitting. We can see this as certain yellow areas
+                are excluded from the filter. This ensures that no background pixels are mistakenly
+                counted as part of the ball.
+            </p>
+        </div>
+
+        <div class="projectHeader" style="margin: 0px; justify-content: left;">
+            <span>
+                <figure>
+                    <video style="width: 400px;" src="images/robot_gazebo.mov" type="video/mp4" autoplay loop muted></video>
+                    <figcaption>Fig 2.4: Testing motion planning in Gazebo.</figcaption>
+                </figure>
+            </span>
+            <p>
+                The motion planning itself was fairly straightforward, with our program providing
+                a series of waypoints that the robot goes to in sequence.
+                One such sequence is shown in Figure 2.4, being simulated in a program called Gazebo.
+                The sequence is meant to imitate picking up the ball and then placing it in another location.
+            </p>
+        </div>
+
+        <div class="projectHeader" style="margin: 0px; justify-content: left;">
+            <span>
+                <figure>
+                    <video style="width: 400px;" src="images/robotArm.MOV" type="video/mp4" autoplay loop muted></video>
+                    <figcaption>Fig 2.4: Final demonstration.</figcaption>
+                </figure>
+            </span>
+            <p>
+                Finally, the entire system was tested using the real-world robot and camera as shown in Figure 2.4.
+                The ball could be placed anywhere on the sheet of paper (limited by camera's FOV at such close range),
+                and the robot would locate and move the ball.
+            </p>
+        </div>
+        
+    </div>
+    
 </body>
 
 </html>
