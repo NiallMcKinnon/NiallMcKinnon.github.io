@@ -74,6 +74,10 @@ body {
     font-size: 15pt;
 }
 
+figure {
+    margin: 10px;
+}
+
 figure figcaption {
     text-align: center;
     vertical-align: top;
