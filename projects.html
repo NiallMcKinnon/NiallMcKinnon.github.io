@@ -35,43 +35,99 @@
             <b>Objective: </b> 
             Enable a LiDAR-equipped rover to autonomously create maps of analogue lunar terrain, to be used by subsequent vehicles and astronauts.
         </div>
-        
-        <p>
-            The rover is capable of two simultaneous localization and mapping (SLAM) methods. The first is 3D mapping (Figure 1.1), which
-            is incredibly valuable for astronaut EVA planning and identifying areas of scientific interest.
-            The second is a much simpler occupancy grid (Figure 1.2), which is more useful for vehicle navigation.
-            The 2D map is utilized for hazard avoidance and path planning.
-        </p>
-        
+
         <div class="imgGroup">
             <figure>
-                <video style="height: 200px;" src="images/3dMapping.mp4" type="video/mp4" autoplay loop muted></video>
-                <figcaption>Fig 1.1: 3D point cloud map</figcaption>
-            </figure>
-            <figure>
-                <video style="height: 200px;" src="images/LunarField_Costmap.mp4" type="video/mp4" autoplay loop muted></video>
-                <figcaption>Fig 1.2: 2D occupancy grid</figcaption>
+                <video style="width: 99%;" src="images/projects/finalTour.mp4" type="video/mp4" controls autoplay muted></video>
+                <figcaption>Fig 1.1: A stroll through the Lunar Terrain Field.</figcaption>
             </figure>
         </div>
         
         <p>
-            3D map generation was already developed for the Kinematic Navigation and Cartography Knapsack (KNaCK),
-            of which this project is an offshoot. My work is focused on the navigation itself, with the goal of complete autonomy.
+            This project is an offshoot of the Kinematic Navigation and Cartography Knapsack (KNaCK),
+            a backpack-mounted LiDAR system that allows humans to map their environment.
+            While KNaCK is being developed for astronaut situational awareness, integrating it
+            onto an autonomous rover (KNaCK-Car) enables the system to asses an environment
+            in advance before the arrival of astronauts and other vehicles.
+        </p>
+        <p>
+            KNaCK-Car is being developed concurrently with the Smart Video Guidance System (SVGS),
+            a lightweight positioning system that only requires a LED target and smartphone-grade camera.
+            SVGS provides reliable positioning, but has no way of detecting hazards. SVGS relies on KNaCK-Car
+            to provide a hazard map, eliminating the need for power-hungry LiDAR scanners on all but the initial
+            scouting vehicle.
+        </p>
+        <p>
+            This project uses the Lunar Terrain Field (LTF) at Marshall Space Flight Center to provide an
+            accurate testing environment (shown in Figure 1.1).
+        </p>
+        
+        
+        <div class="imgGroup">
+            <figure>
+                <video style="height: 210px;" src="images/3dMapping.mp4" type="video/mp4" autoplay loop muted></video>
+                <figcaption>Fig 1.2: 3D point cloud map</figcaption>
+            </figure>
+            <figure>
+                <video style="height: 210px;" src="images/LunarField_Costmap.mp4" type="video/mp4" autoplay loop muted></video>
+                <figcaption>Fig 1.3: 2D occupancy grid/hazard map</figcaption>
+            </figure>
+        </div>
+
+        <p>
+            Figures 1.2 and 1.3 show two maps created by KNaCK-Car.
+            The original KNaCK is focused entirely on 3D mapping; this can be directly ported to KNaCK-Car.
+            The development of KNaCK-Car is thus focused on 2D mapping, which creates the hazard map for
+            subsequent vehicles.
+        </p>
+        <p>
+            The navigation of KNaCK-Car is built upon Robot Operating System (ROS) and its Navigation 2 (Nav2) framework.
+            Nav2 provides accessible means of simultaneous localization and mapping (SLAM), but is mainly intended for
+            structured environments such as warehouses. Thus, most of KNaCK-Car's technical challenges involve adapting
+            this 2D SLAM software to function in an environment with uneven terrain and non-uniform obstacles.
+        </p>
+
+        <div class="inline">
+            <figure>
+                <video style="width: 500px;;" src="images/projects/indoorScanmatching.mp4" type="video/mp4" autoplay loop muted></video>
+                <figcaption>
+                    Fig 1.4: Scan matching + path finding in an indoor environment.
+                    This is the return trip; the rover created this map in the same run.
+                </figcaption>
+            </figure>
+            <p>
+                Figure 1.4 shows KNaCK-Car navigating through a series of hallways.
+                One can clearly see "scan matching" taking place, wherein the robot 
+                matches its LiDAR scan to the map like a puzzle piece.
+                This ensures accurate positioning in the face of sensor errors.
+            </p>
+        </div>
+        <div class="inline">
+            <figure>
+                <video style="width: 500px;;" src="images/projects/scanmatchingField.mp4" type="video/mp4" autoplay loop muted></video>
+                <figcaption>
+                    Fig 1.5: SLAM in the LTF.
+                    (This recording was corrupted but still illustrates SLAM and scan matching)
+                </figcaption>
+            </figure>
+            <p>
+                Figure 1.5 shows similar scan matching in the LTF.
+                This was a vast improvement over an earlier test (shown in Figure 2.3),
+                which failed to detect several hazards in the "hallway" between two berms.
+            </p>
+        </div>
+        
+        <p>
+            
         </p>
         
         <span class="imgGroup">
             <figure>
                 <video style="height: 300px;" src="images/pathfinding.webm" type="video/mp4" autoplay loop muted></video>
-                <figcaption>Fig 1.3: Simultaneous Localization & Mapping</figcaption>
+                <figcaption>Fig 1.6: Another SLAM and path fiding example.</figcaption>
             </figure>
         </span>
-        
-        <p>
-            This project makes use of Robot Operating System (ROS) and its Navigation 2 (Nav2) package.
-            Nav2 already has sophisticated map generation and path planning capabilities, but it was primarily
-            designed for structured environments such as warehouses. Thus, a key challenge of 
-            this project is adding robustness for an uneven environment. 
-        </p>            
+               
     </div>
     
     <div class="section">
